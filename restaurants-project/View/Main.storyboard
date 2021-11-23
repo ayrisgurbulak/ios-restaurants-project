@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OBi-lQ-36f">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico-Regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhr-pX-2KB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UCD-Yq-2Ut">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndf-V6-5im" userLabel="TitleView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="257.33333333333331"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsk-nc-pHz">
+                                                        <rect key="frame" x="102.66666666666667" y="93.666666666666657" width="208.66666666666663" height="70.333333333333343"/>
+                                                        <color key="tintColor" red="0.12941176469999999" green="0.54901960780000003" blue="0.2154406978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="hsk-nc-pHz" firstAttribute="centerX" secondItem="ndf-V6-5im" secondAttribute="centerX" id="FyM-TB-Dhh"/>
+                                                    <constraint firstItem="hsk-nc-pHz" firstAttribute="centerY" secondItem="ndf-V6-5im" secondAttribute="centerY" id="gBB-RP-dhK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYF-Id-KMQ" userLabel="ImageView">
+                                                <rect key="frame" x="0.0" y="258.33333333333337" width="414" height="257.33333333333337"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="10B-2o-Y1A">
+                                                        <rect key="frame" x="10" y="0.0" width="394" height="218.33333333333334"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="10B-2o-Y1A" secondAttribute="trailing" constant="10" id="5Ta-7T-ASt"/>
+                                                    <constraint firstItem="10B-2o-Y1A" firstAttribute="centerX" secondItem="KYF-Id-KMQ" secondAttribute="centerX" id="Scd-O3-gLH"/>
+                                                    <constraint firstItem="10B-2o-Y1A" firstAttribute="leading" secondItem="KYF-Id-KMQ" secondAttribute="leading" constant="10" id="cq6-WE-4HI"/>
+                                                    <constraint firstItem="10B-2o-Y1A" firstAttribute="top" secondItem="KYF-Id-KMQ" secondAttribute="top" id="kfk-cb-pQ0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgx-oM-XGw" userLabel="ButtonView">
+                                                <rect key="frame" x="0.0" y="516.66666666666663" width="414" height="257.33333333333337"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9RJ-S9-6sg">
+                                                        <rect key="frame" x="57" y="81.333333333333371" width="300" height="95"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wp-bu-Nvk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="DrO-ht-47Q"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="pOH-Iz-wtP"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="tinted" title="Log In">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="baseBackgroundColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="SdB-HD-7vO" kind="show" id="8Ee-I5-GbB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGG-vb-FwH">
+                                                                <rect key="frame" x="0.0" y="55" width="300" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="ymf-vJ-lwh"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="zap-CM-dhp"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="tinted" title="Sign up">
+                                                                    <color key="baseBackgroundColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="aMZ-7u-cS2" kind="show" id="Ez2-CO-Paz"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="9RJ-S9-6sg" firstAttribute="centerY" secondItem="dgx-oM-XGw" secondAttribute="centerY" id="KiK-sR-Vwo"/>
+                                                    <constraint firstItem="9RJ-S9-6sg" firstAttribute="centerX" secondItem="dgx-oM-XGw" secondAttribute="centerX" id="jww-aw-mqx"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="KYF-Id-KMQ" firstAttribute="leading" secondItem="UCD-Yq-2Ut" secondAttribute="leading" id="WB1-qi-hHO"/>
+                                            <constraint firstAttribute="trailing" secondItem="KYF-Id-KMQ" secondAttribute="trailing" id="cS7-tY-WQB"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="UCD-Yq-2Ut" secondAttribute="bottom" id="9SD-2M-5zY"/>
+                                    <constraint firstItem="UCD-Yq-2Ut" firstAttribute="top" secondItem="jhr-pX-2KB" secondAttribute="top" id="Flm-rj-8wN"/>
+                                    <constraint firstAttribute="trailing" secondItem="UCD-Yq-2Ut" secondAttribute="trailing" id="KYd-R1-ciU"/>
+                                    <constraint firstItem="UCD-Yq-2Ut" firstAttribute="leading" secondItem="jhr-pX-2KB" secondAttribute="leading" id="lFX-v4-9z9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jhr-pX-2KB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Ly-6c-xYH"/>
+                            <constraint firstItem="jhr-pX-2KB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bk5-aX-zn5"/>
+                            <constraint firstItem="jhr-pX-2KB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Meh-k0-FUe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jhr-pX-2KB" secondAttribute="bottom" id="tjy-1r-2kY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="42N-j3-ryY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="79.6875"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="aYG-AK-aqA">
+            <objects>
+                <viewController id="SdB-HD-7vO" userLabel="Login View Controller" customClass="LoginViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JBf-p6-Af1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Jd-a0-y9p">
+                                <rect key="frame" x="57" y="138" width="300" height="130"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-a6-Bhw" userLabel="Password TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="D6x-Pa-kdz"/>
+                                            <constraint firstAttribute="height" constant="50" id="kEm-tA-c2D"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7y9-ro-hdF" userLabel="Email TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="az2-o1-AkX"/>
+                                            <constraint firstAttribute="height" constant="50" id="cic-sl-ucx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqO-kR-DOX" userLabel="Log In">
+                                <rect key="frame" x="57" y="318" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="a9X-KA-OnD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="uZF-Kp-F43"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="SdB-HD-7vO" eventType="touchUpInside" id="S4Q-Uv-MTu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4i9-Mt-8sP"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9Jd-a0-y9p" firstAttribute="top" secondItem="4i9-Mt-8sP" secondAttribute="top" constant="50" id="Rdp-aq-tll"/>
+                            <constraint firstItem="IqO-kR-DOX" firstAttribute="centerX" secondItem="JBf-p6-Af1" secondAttribute="centerX" id="biT-3Y-A8m"/>
+                            <constraint firstItem="IqO-kR-DOX" firstAttribute="top" secondItem="9Jd-a0-y9p" secondAttribute="bottom" constant="50" id="fFk-KY-PTO"/>
+                            <constraint firstItem="4i9-Mt-8sP" firstAttribute="trailing" secondItem="9Jd-a0-y9p" secondAttribute="trailing" constant="57" id="jzL-u5-Rn9"/>
+                            <constraint firstItem="9Jd-a0-y9p" firstAttribute="leading" secondItem="4i9-Mt-8sP" secondAttribute="leading" constant="57" id="wjn-qu-poe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hEm-Qt-RMD"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="oTf-a6-Bhw" id="1ZQ-8e-OWq"/>
+                        <outlet property="passwordTextfield" destination="7y9-ro-hdF" id="mUc-Rq-XSK"/>
+                        <segue destination="27v-2f-2ug" kind="show" identifier="LoginToTabbar" id="L5Y-9W-iv3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlj-fR-d8F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.985507246377" y="-82.366071428571431"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="zLj-hE-Bar">
+            <objects>
+                <viewController id="aMZ-7u-cS2" userLabel="Signup View Controller" customClass="SignupViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wgp-Tx-NFM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ddt-Nx-aTs" userLabel="TextField View">
+                                <rect key="frame" x="57" y="138" width="300" height="260"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nM5-v2-Nrr" userLabel="Name Textfield" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="C6S-Fv-5Ju"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gFE-kH-2ph"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="name"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-v9-9Ge" userLabel="Email Textfield" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1C1-j3-UM6"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="kTE-T3-HE3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2R-UV-qVe" userLabel="Password TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="FIF-cn-eM2"/>
+                                            <constraint firstAttribute="height" constant="50" id="vBF-6H-5u4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaw-WO-NsB" userLabel="Confirm Password TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="210" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Svm-dz-bkh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Xvo-ME-hGL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hLt-ai-AFB" userLabel="Sıgn Up View">
+                                <rect key="frame" x="57" y="438" width="300" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOy-Az-ATG" userLabel="Sign Up">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="olo-Br-CbQ"/>
+                                            <constraint firstAttribute="height" constant="50" id="zr3-q4-dVA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signupPressed:" destination="aMZ-7u-cS2" eventType="touchUpInside" id="1ba-gV-q7W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hmj-PW-q3O"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hmj-PW-q3O" firstAttribute="trailing" secondItem="ddt-Nx-aTs" secondAttribute="trailing" constant="57" id="1Rh-2F-fnn"/>
+                            <constraint firstItem="ddt-Nx-aTs" firstAttribute="top" secondItem="Hmj-PW-q3O" secondAttribute="top" constant="50" id="3qe-d1-iXw"/>
+                            <constraint firstItem="hLt-ai-AFB" firstAttribute="leading" secondItem="Hmj-PW-q3O" secondAttribute="leading" constant="57" id="5pd-3Z-ob4"/>
+                            <constraint firstItem="ddt-Nx-aTs" firstAttribute="leading" secondItem="Hmj-PW-q3O" secondAttribute="leading" constant="57" id="AZq-yj-uxJ"/>
+                            <constraint firstItem="ddt-Nx-aTs" firstAttribute="centerX" secondItem="wgp-Tx-NFM" secondAttribute="centerX" id="CDL-fJ-tS1"/>
+                            <constraint firstItem="hLt-ai-AFB" firstAttribute="centerX" secondItem="wgp-Tx-NFM" secondAttribute="centerX" id="mGL-fg-mnQ"/>
+                            <constraint firstItem="Hmj-PW-q3O" firstAttribute="trailing" secondItem="hLt-ai-AFB" secondAttribute="trailing" constant="57" id="o9V-9N-Ibh"/>
+                            <constraint firstItem="hLt-ai-AFB" firstAttribute="top" secondItem="ddt-Nx-aTs" secondAttribute="bottom" constant="40" id="to7-0Z-xRA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y4r-Fc-cSj"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="yaw-WO-NsB" id="DNf-rx-w0Z"/>
+                        <outlet property="emailTextField" destination="0VH-v9-9Ge" id="XJE-qv-Yv8"/>
+                        <outlet property="passwordTextField" destination="l2R-UV-qVe" id="af4-WV-gI2"/>
+                        <segue destination="27v-2f-2ug" kind="show" identifier="SignupToTabbar" id="oXc-4u-9lr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2Q-DD-5OW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959" y="680"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="MhX-zE-DmO">
+            <objects>
+                <viewController id="ww7-hd-LRZ" userLabel="Friends" customClass="FriendsViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VC3-2o-xcx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NB2-ia-rsB"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friends" image="person" selectedImage="person" id="ISM-eH-duK"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbx-Bm-gn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3801" y="579"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="GE6-AJ-RnX">
+            <objects>
+                <viewController id="aqh-cA-qZB" userLabel="Map" customClass="MapViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iHp-iH-yzW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="043-FI-HJ1" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                </accessibility>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="dJx-te-qtq">
+                                <rect key="frame" x="191" y="443" width="32" height="32"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="URw-5J-Oeb"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="043-FI-HJ1" firstAttribute="top" secondItem="iHp-iH-yzW" secondAttribute="top" id="60Z-4z-QzA"/>
+                            <constraint firstItem="dJx-te-qtq" firstAttribute="bottom" secondItem="URw-5J-Oeb" secondAttribute="centerY" id="A3Z-aX-68u"/>
+                            <constraint firstAttribute="bottom" secondItem="043-FI-HJ1" secondAttribute="bottom" id="KhY-4F-etC"/>
+                            <constraint firstAttribute="trailing" secondItem="043-FI-HJ1" secondAttribute="trailing" id="WF8-wb-NRR"/>
+                            <constraint firstItem="043-FI-HJ1" firstAttribute="leading" secondItem="iHp-iH-yzW" secondAttribute="leading" id="lLn-5m-9yy"/>
+                            <constraint firstItem="dJx-te-qtq" firstAttribute="centerX" secondItem="URw-5J-Oeb" secondAttribute="centerX" id="uFa-Vx-7wk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" selectedImage="map" id="50z-vE-aBX"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="043-FI-HJ1" id="VhI-36-duu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkR-wu-nQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3800.0000000000005" y="-82.366071428571431"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kiK-em-YOG">
+            <objects>
+                <tabBarController id="27v-2f-2ug" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lvV-oB-NZV"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hC6-mg-BV2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.77158612668160487" green="0.79371362457419048" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aqh-cA-qZB" kind="relationship" relationship="viewControllers" id="HtK-d1-2uV"/>
+                        <segue destination="ww7-hd-LRZ" kind="relationship" relationship="viewControllers" id="Xxe-wR-ez3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqa-zG-Hks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2914" y="276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5ZN-vV-0Vy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OBi-lQ-36f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ikZ-nT-vL6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dgZ-Zd-BVM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKo-Hl-mxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="79.6875"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0VH-v9-9Ge">
+            <size key="intrinsicContentSize" width="93.666666666666671" height="34"/>
+        </designable>
+        <designable name="7y9-ro-hdF">
+            <size key="intrinsicContentSize" width="116.33333333333333" height="34"/>
+        </designable>
+        <designable name="l2R-UV-qVe">
+            <size key="intrinsicContentSize" width="116.33333333333333" height="34"/>
+        </designable>
+        <designable name="nM5-v2-Nrr">
+            <size key="intrinsicContentSize" width="92" height="34"/>
+        </designable>
+        <designable name="oTf-a6-Bhw">
+            <size key="intrinsicContentSize" width="93.666666666666671" height="34"/>
+        </designable>
+        <designable name="yaw-WO-NsB">
+            <size key="intrinsicContentSize" width="171.66666666666666" height="34"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="L5Y-9W-iv3"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="email" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="map" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="name" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="password" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="person" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="pin" width="32" height="32"/>
+        <image name="restaurant" width="323.33334350585938" height="218.33332824707031"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
