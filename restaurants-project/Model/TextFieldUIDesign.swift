@@ -1,10 +1,3 @@
-//
-//  TextFieldUIDesign.swift
-//  first-project
-//
-//  Created by Ayris Gürbulak on 14.11.2021.
-//
-
 import UIKit
 
 @IBDesignable

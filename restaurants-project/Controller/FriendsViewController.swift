@@ -1,10 +1,3 @@
-//
-//  FriendsViewController.swift
-//  restaurants-project
-//
-//  Created by Ayris Gürbulak on 23.11.2021.
-//
-
 import UIKit
 
 class FriendsViewController: UIViewController {

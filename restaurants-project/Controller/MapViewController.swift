@@ -1,10 +1,3 @@
-//
-//  MapViewController.swift
-//  restaurants-project
-//
-//  Created by Ayris Gürbulak on 23.11.2021.
-//
-
 import UIKit
 import GoogleMaps
 import FirebaseAuth
@@ -47,6 +40,7 @@ class MapViewController: UIViewController {
             places.results.forEach { place in
                 DispatchQueue.main.async {
                     let marker = RestaurantMarker(place: place)
+                    print("marker:",marker)
                     marker.map = self.mapView
                     
                 }

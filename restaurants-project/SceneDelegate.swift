@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  restaurants-project
-//
-//  Created by Ayris Gürbulak on 22.11.2021.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

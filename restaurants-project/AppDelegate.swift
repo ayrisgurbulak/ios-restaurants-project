@@ -1,9 +1,8 @@
-
 import UIKit
 import Firebase
 import GoogleMaps
 
-let googleAPIKey = "ENTER_KEY"
+let googleAPIKey = "AIzaSyDHIw4Tv0b1m3cbP1JZGMewPIFpR9A9SBU"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
