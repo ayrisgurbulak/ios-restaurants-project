@@ -20,6 +20,8 @@
 		EC9CA061274BA85D008A3C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9CA060274BA85D008A3C98 /* Main.storyboard */; };
 		EC9CA064274BA8CB008A3C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9CA063274BA8CA008A3C98 /* Assets.xcassets */; };
 		EC9CA066274BA8D7008A3C98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CA065274BA8D7008A3C98 /* Constants.swift */; };
+		EC9F12E727578D94004386B3 /* RestaurantInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC9F12E627578D94004386B3 /* RestaurantInfo.xib */; };
+		EC9F12E927578DD0004386B3 /* RestaurantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F12E827578DD0004386B3 /* RestaurantInfo.swift */; };
 		ECFC0310274D630200A5B6B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFC030F274D630200A5B6B2 /* LoginViewController.swift */; };
 		ECFC0312274D631300A5B6B2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFC0311274D631300A5B6B2 /* WelcomeViewController.swift */; };
 		ECFC0314274D633800A5B6B2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFC0313274D633800A5B6B2 /* SignupViewController.swift */; };
@@ -46,6 +48,8 @@
 		EC9CA060274BA85D008A3C98 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EC9CA063274BA8CA008A3C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC9CA065274BA8D7008A3C98 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC9F12E627578D94004386B3 /* RestaurantInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantInfo.xib; sourceTree = "<group>"; };
+		EC9F12E827578DD0004386B3 /* RestaurantInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfo.swift; sourceTree = "<group>"; };
 		ECFC030F274D630200A5B6B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ECFC0311274D631300A5B6B2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		ECFC0313274D633800A5B6B2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				EC9CA060274BA85D008A3C98 /* Main.storyboard */,
+				EC9F12E627578D94004386B3 /* RestaurantInfo.xib */,
+				EC9F12E827578DD0004386B3 /* RestaurantInfo.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9F12E727578D94004386B3 /* RestaurantInfo.xib in Resources */,
 				EC9CA055274BA61F008A3C98 /* Fonts in Resources */,
 				EC9CA049274BA436008A3C98 /* LaunchScreen.storyboard in Resources */,
 				EC9CA061274BA85D008A3C98 /* Main.storyboard in Resources */,
@@ -299,6 +306,7 @@
 				EC9CA03D274BA435008A3C98 /* AppDelegate.swift in Sources */,
 				EC9CA03F274BA435008A3C98 /* SceneDelegate.swift in Sources */,
 				EC669CA7274D779200D680A6 /* RestaurantDataManager.swift in Sources */,
+				EC9F12E927578DD0004386B3 /* RestaurantInfo.swift in Sources */,
 				EC9CA066274BA8D7008A3C98 /* Constants.swift in Sources */,
 				ECFC031A274D639D00A5B6B2 /* TextFieldUIDesign.swift in Sources */,
 				EC669CAB274D77CA00D680A6 /* RestaurantMarker.swift in Sources */,
