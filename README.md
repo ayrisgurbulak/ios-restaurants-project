@@ -6,7 +6,7 @@
 
 Finding the nearest restaurants around.
 
-<img width="350" alt="Screen Shot 2021-12-04 at 17 24 28" src="https://user-images.githubusercontent.com/67962952/144713113-db474278-35ba-4731-9abf-c9559925ddca.png">
+<img width="200" alt="Screen Shot 2021-12-04 at 17 24 28" src="https://user-images.githubusercontent.com/67962952/144713113-db474278-35ba-4731-9abf-c9559925ddca.png">
 
 - FriendsViewController
 
