@@ -13,6 +13,8 @@ class MapViewController: UIViewController {
     
     private let restaurantAnimate = RestaurantInfo()
     
+    var oldPolyLines = [GMSPolyline]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +33,6 @@ class MapViewController: UIViewController {
         mapView.delegate = self
 
         
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +48,7 @@ class MapViewController: UIViewController {
                 DispatchQueue.main.async {
                     let marker = RestaurantMarker(place: place)
                     marker.map = self.mapView
+                    //print(place.coordinate)
                     
                 }
             }
@@ -95,18 +97,13 @@ extension MapViewController: CLLocationManagerDelegate {
 // MARK: - GMSMapViewDelegate
 extension MapViewController: GMSMapViewDelegate {
     
-    /*func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
-        
-        guard let placeMarker = marker as? RestaurantMarker else {
-          return nil
-        }
-        
-        print(placeMarker.place.name)
-        
-        return nil
-    }*/
-    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        if oldPolyLines.count > 0 {
+            for polyline in oldPolyLines {
+                polyline.map = nil
+            }
+        }
         
         guard let placeMarker = marker as? RestaurantMarker else {
           return false
@@ -130,17 +127,33 @@ extension MapViewController: GMSMapViewDelegate {
         
         infoView.animShow()
         
+        guard let lat = locationManager.location?.coordinate.latitude else {
+            return false
+        }
+        
+        guard let lng = locationManager.location?.coordinate.longitude else {
+            return false
+        }
+        
+        let directionUrl = "\(C.Urls.directionUrl)&origin=\(lat),\(lng)&destination=\(placeMarker.place.coordinate.latitude),\(placeMarker.place.coordinate.longitude)"
+        
+        dataProvider.fetchRoute(url: directionUrl) { response in
+            response.routes.forEach { r in
+                
+                DispatchQueue.main.async {
+                    let path = GMSPath.init(fromEncodedPath: r.overview_polyline.points )
+                    let polyline = GMSPolyline.init(path: path)
+                    polyline.strokeColor = .systemBlue
+                    polyline.strokeWidth = 5
+                    polyline.map = self.mapView
+                    self.oldPolyLines.append(polyline)
+                }
+                
+            }
+        }
         
         return false
       }
     
-    /*func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        guard let placeMarker = marker as? RestaurantMarker else {
-          return nil
-        }
-        
-        
-        return nil
-    }*/
     
 }

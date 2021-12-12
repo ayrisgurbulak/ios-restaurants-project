@@ -12,15 +12,7 @@ struct RestaurantData: Decodable {
     var coordinate: CLLocationCoordinate2D {
       return CLLocationCoordinate2D(latitude: geometry.location.lat, longitude: geometry.location.lng)
     }
-    
-}
 
-enum CodingKeys: String, CodingKey {
-  case name
-  case vicinity
-  case types
-  case rating
-  case geometry
 }
 
 struct Response: Decodable {
@@ -36,4 +28,6 @@ private struct Location: Decodable {
   let lat: CLLocationDegrees
   let lng: CLLocationDegrees
 }
+
+
 

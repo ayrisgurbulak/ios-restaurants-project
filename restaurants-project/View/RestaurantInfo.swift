@@ -19,14 +19,12 @@ class RestaurantInfo: UIView {
 
 extension UIView{
     func animShow(){
-        print(self.frame)
         UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn],
                        animations: {
             self.center.y -= self.frame.height
             //self.layoutIfNeeded()
         }, completion: nil)
         //self.isHidden = false
-        print(self.frame)
     }
     /*func animHide(){
         UIView.animate(withDuration: 2, delay: 0, options: [.curveLinear],

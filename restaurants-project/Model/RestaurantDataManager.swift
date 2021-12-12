@@ -9,12 +9,13 @@ struct RestaurantDataManager {
         let lat = String(format: "%.6f", coordinate.latitude)
         let lng = String(format: "%.6f", coordinate.longitude)
         
-//        print("lat:",lat)
-//        print("lng:",lng)
+        var restaurantUrl = "\(C.Urls.restaurantsUrl)&location=\(lat) \(lng)&radius=\(radius)"
         
-        var restaurantUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat) \(lng)&radius=\(radius)&rankby=prominence&sensor=true&key=\(googleAPIKey)&types=restaurant"
+        //print(restaurantUrl)
         
         restaurantUrl = restaurantUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? restaurantUrl
+        
+        //print(restaurantUrl)
         
         if let url = URL(string: restaurantUrl) {
             
@@ -39,17 +40,45 @@ struct RestaurantDataManager {
         
     }
     
+    func fetchRoute(url: String, completion: @escaping (Directions) ->Void){
+        
+        if let url = URL(string: url) {
+            
+            let session = URLSession(configuration: .default)
+            
+            let task = session.dataTask(with: url) { data, response, error in
+               
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                
+                if let safeData = data {
+                    
+                    let decoder = JSONDecoder()
+                    do {
+                        
+                        let points = try decoder.decode(Directions.self, from: safeData)
+                        completion(points)
+                        
+                    } catch {
+                        
+                        print(error)
+                    }
+                    
+                }
+            }
+            
+            task.resume()
+            
+        }
+    }
+    
     func parseJSON(_ places: Data) -> Response? {
         let decoder = JSONDecoder()
         
         do{
             let places = try decoder.decode(Response.self, from: places)
-            
-//            let name = decodedData.results[0].name
-//            let address = decodedData.results[0].vicinity
-//            let rating = decodedData.results[0].rating
-//
-//            let place = RestaurantModel(restaurantName: name, restaurantAdress: address, restaurantRating: rating)
             
             return places
             
