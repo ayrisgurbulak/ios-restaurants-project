@@ -2,6 +2,7 @@ import UIKit
 
 @IBDesignable
 class DesignableUITextField: UITextField {
+    
 
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         var textRect = super.leftViewRect(forBounds: bounds)
@@ -18,7 +19,7 @@ class DesignableUITextField: UITextField {
             }
         }
     
-    @IBInspectable var borderColor: UIColor? {
+   @IBInspectable var borderColor: UIColor? {
            set {
                guard let uiColor = newValue else { return }
                layer.borderColor = uiColor.cgColor
@@ -28,6 +29,24 @@ class DesignableUITextField: UITextField {
                return UIColor(cgColor: color)
            }
        }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable var masksToBounds: Bool {
+        set {
+            layer.masksToBounds = newValue
+        }
+        get {
+            return layer.masksToBounds
+        }
+    }
 
     @IBInspectable var leftImage: UIImage? {
         didSet {
@@ -35,13 +54,7 @@ class DesignableUITextField: UITextField {
         }
     }
     
-    @IBInspectable var leftPadding: CGFloat = 0
-
-    @IBInspectable var color: UIColor = UIColor.lightGray {
-        didSet {
-            updateView()
-        }
-    }
+    @IBInspectable var leftPadding: CGFloat = 10
 
     func updateView() {
         if let image = leftImage {
@@ -49,7 +62,7 @@ class DesignableUITextField: UITextField {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 20))
             imageView.contentMode = .scaleAspectFit
             imageView.image = image
-            imageView.tintColor = color
+            imageView.tintColor = UIColor.lightGray
             leftView = imageView
         } else {
             leftViewMode = UITextField.ViewMode.never

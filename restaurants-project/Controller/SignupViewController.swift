@@ -1,9 +1,12 @@
 import UIKit
 import Firebase
+import CryptoSwift
 
 class SignupViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: DesignableUITextField!
     @IBOutlet weak var emailTextField: DesignableUITextField!
+    @IBOutlet weak var numberTextField: DesignableUITextField!
     @IBOutlet weak var passwordTextField: DesignableUITextField!
     @IBOutlet weak var confirmPasswordTextField: DesignableUITextField!
     
@@ -26,6 +29,19 @@ class SignupViewController: UIViewController {
                                 print(e)
                             }
                             else {
+                                
+                                let uuid = UUID().uuidString
+                                let passwordMD5 = self.passwordTextField.text!.md5()
+                                
+                                let userData = [
+                                    "uuid": uuid,
+                                    "name": self.nameTextField.text!,
+                                    "email": self.emailTextField.text!,
+                                    "password:": passwordMD5,
+                                    "number:": self.numberTextField.text!]
+                                
+                                C.Db.db.collection("users").document(uuid).setData(userData)
+
                                 self.performSegue(withIdentifier: C.signupSegue, sender: self)
                             }
                         }
@@ -55,12 +71,13 @@ class SignupViewController: UIViewController {
     }
     
     func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        
-        //evaluate - belli koşullarda eşleşip eşleşmediğini kontrol
-        return emailPred.evaluate(with: email)
+//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+//
+//        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+//
+//        //evaluate - belli koşullarda eşleşip eşleşmediğini kontrol
+//        return emailPred.evaluate(with: email)
+        return true
     }
     
     func isValidPassword(_ password: String) -> Bool {
@@ -69,6 +86,9 @@ class SignupViewController: UIViewController {
         let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
         
         return passwordPred.evaluate(with: password)
+        
     }
 
 }
+
+

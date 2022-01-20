@@ -31,8 +31,18 @@ class MapViewController: UIViewController {
           locationManager.requestWhenInUseAuthorization()
         }
         mapView.delegate = self
-
         
+        infoView.selectButton.addTarget(self, action: #selector(selectButtonPressed), for: .touchUpInside)
+    
+    }
+    
+    @objc func selectButtonPressed() {
+        //print(infoView.restaurantLabel.text!)
+        /*C.Db.db.collection("users").whereField("number", isEqualTo: "5398210157").getDocuments { snaphot, error in
+            for document in snaphot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+        }*/
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +58,6 @@ class MapViewController: UIViewController {
                 DispatchQueue.main.async {
                     let marker = RestaurantMarker(place: place)
                     marker.map = self.mapView
-                    //print(place.coordinate)
                     
                 }
             }

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OBi-lQ-36f">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico-Regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="HBe-Fg-0bw">
+                                <rect key="frame" x="52.333333333333343" y="193" width="323.33333333333326" height="540.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsk-nc-pHz">
+                                        <rect key="frame" x="57.333333333333329" y="0.0" width="208.66666666666669" height="70.333333333333329"/>
+                                        <color key="tintColor" red="0.12941176469999999" green="0.54901960780000003" blue="0.2154406978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="10B-2o-Y1A">
+                                        <rect key="frame" x="0.0" y="130.33333333333331" width="323.33333333333331" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="902-X9-iTY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9RJ-S9-6sg">
+                                        <rect key="frame" x="0.0" y="420.33333333333337" width="323.33333333333331" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wp-bu-Nvk">
+                                                <rect key="frame" x="0.0" y="0.0" width="323.33333333333331" height="50"/>
+                                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="DrO-ht-47Q"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Log In">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="SdB-HD-7vO" kind="show" id="8Ee-I5-GbB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGG-vb-FwH">
+                                                <rect key="frame" x="0.0" y="70" width="323.33333333333331" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ymf-vJ-lwh"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Sign up">
+                                                    <color key="baseBackgroundColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="aMZ-7u-cS2" kind="show" id="Ez2-CO-Paz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9RJ-S9-6sg" firstAttribute="width" secondItem="10B-2o-Y1A" secondAttribute="width" id="jWJ-vR-1LQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="HBe-Fg-0bw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bGB-et-4ju"/>
+                            <constraint firstItem="HBe-Fg-0bw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xCc-qP-Dsh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="42N-j3-ryY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="79.6875"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="aYG-AK-aqA">
+            <objects>
+                <viewController id="SdB-HD-7vO" userLabel="Login View Controller" customClass="LoginViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JBf-p6-Af1">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Jd-a0-y9p">
+                                <rect key="frame" x="64.333333333333343" y="138" width="299.33333333333326" height="180"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-a6-Bhw" userLabel="Password TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="299.33333333333331" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="x1K-Jv-CtP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7y9-ro-hdF" userLabel="Email TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="299.33333333333331" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="AZE-9B-E2E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqO-kR-DOX" userLabel="Log In">
+                                        <rect key="frame" x="0.0" y="130" width="299.33333333333331" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="a9X-KA-OnD"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="SdB-HD-7vO" eventType="touchUpInside" id="S4Q-Uv-MTu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4i9-Mt-8sP"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9Jd-a0-y9p" firstAttribute="top" secondItem="4i9-Mt-8sP" secondAttribute="top" constant="50" id="Rdp-aq-tll"/>
+                            <constraint firstItem="9Jd-a0-y9p" firstAttribute="width" secondItem="JBf-p6-Af1" secondAttribute="width" multiplier="0.7" id="bSP-KF-V0m"/>
+                            <constraint firstItem="9Jd-a0-y9p" firstAttribute="centerX" secondItem="JBf-p6-Af1" secondAttribute="centerX" id="gIi-yQ-Lfo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hEm-Qt-RMD"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="oTf-a6-Bhw" id="1ZQ-8e-OWq"/>
+                        <outlet property="passwordTextfield" destination="7y9-ro-hdF" id="mUc-Rq-XSK"/>
+                        <segue destination="27v-2f-2ug" kind="show" identifier="LoginToTabbar" id="L5Y-9W-iv3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlj-fR-d8F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.985507246377" y="-82.366071428571431"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="zLj-hE-Bar">
+            <objects>
+                <viewController id="aMZ-7u-cS2" userLabel="Signup View Controller" customClass="SignupViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wgp-Tx-NFM">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ddt-Nx-aTs" userLabel="TextField View">
+                                <rect key="frame" x="64.333333333333343" y="138" width="299.33333333333326" height="375"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nM5-v2-Nrr" userLabel="Name Textfield" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="299.33333333333331" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="MXE-eh-6jr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="name"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-v9-9Ge" userLabel="Email Textfield" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="299.33333333333331" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="UTi-KW-GtC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ah-vJ-k9q" userLabel="Number TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="130" width="299.33333333333331" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="lTv-CX-g3y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="phone"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2R-UV-qVe" userLabel="Password TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="195" width="299.33333333333331" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Yph-zt-JBq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaw-WO-NsB" userLabel="Confirm Password TextField" customClass="DesignableUITextField" customModule="restaurants_project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="260" width="299.33333333333331" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="HtB-lN-8tZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOy-Az-ATG" userLabel="Sign Up">
+                                        <rect key="frame" x="0.0" y="325" width="299.33333333333331" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Isg-gd-zZS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signupPressed:" destination="aMZ-7u-cS2" eventType="touchUpInside" id="1ba-gV-q7W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hmj-PW-q3O"/>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.89411764705882346" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ddt-Nx-aTs" firstAttribute="top" secondItem="Hmj-PW-q3O" secondAttribute="top" constant="50" id="3qe-d1-iXw"/>
+                            <constraint firstItem="ddt-Nx-aTs" firstAttribute="centerX" secondItem="wgp-Tx-NFM" secondAttribute="centerX" id="CDL-fJ-tS1"/>
+                            <constraint firstItem="ddt-Nx-aTs" firstAttribute="width" secondItem="wgp-Tx-NFM" secondAttribute="width" multiplier="0.7" id="GVI-6m-d1r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y4r-Fc-cSj"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="yaw-WO-NsB" id="DNf-rx-w0Z"/>
+                        <outlet property="emailTextField" destination="0VH-v9-9Ge" id="XJE-qv-Yv8"/>
+                        <outlet property="nameTextField" destination="nM5-v2-Nrr" id="fcm-TN-ot3"/>
+                        <outlet property="numberTextField" destination="2ah-vJ-k9q" id="ITt-jK-GV7"/>
+                        <outlet property="passwordTextField" destination="l2R-UV-qVe" id="af4-WV-gI2"/>
+                        <segue destination="27v-2f-2ug" kind="show" identifier="SignupToTabbar" id="oXc-4u-9lr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2Q-DD-5OW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="973"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="mOq-dt-OwZ">
+            <objects>
+                <tableViewController title="Friends" id="bRW-5c-Kfh" userLabel="Friends" customClass="FriendsViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0Cf-l6-fmJ">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.77158612670000004" green="0.79371362459999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.77158612670000004" green="0.79371362459999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsCell" id="xOf-gv-mKa" customClass="FriendsCell" customModule="restaurants_project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="72.333335876464844"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xOf-gv-mKa" id="STD-RS-Ae7">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="72.333335876464844"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0uP-ML-rc7">
+                                            <rect key="frame" x="20" y="11.000000000000004" width="388" height="50.333333333333343"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P9X-cw-vIt">
+                                                    <rect key="frame" x="0.0" y="0.3333333333333357" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="2Kq-ak-Ydg"/>
+                                                        <constraint firstAttribute="width" constant="50" id="aSA-mI-58Y"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qo5-An-iSy">
+                                                    <rect key="frame" x="60" y="0.3333333333333357" width="328" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3r-rv-Vna" userLabel="name">
+                                                            <rect key="frame" x="0.0" y="0.0" width="328" height="20"/>
+                                                            <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="SE2-tM-Yw6"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="restaurant Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00B-YP-eMe" userLabel="restaurant">
+                                                            <rect key="frame" x="0.0" y="30" width="328" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="7Kg-rH-J2C"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="0uP-ML-rc7" firstAttribute="leading" secondItem="STD-RS-Ae7" secondAttribute="leadingMargin" id="64q-dN-oJQ"/>
+                                        <constraint firstItem="0uP-ML-rc7" firstAttribute="top" secondItem="STD-RS-Ae7" secondAttribute="topMargin" id="GxX-9G-1Vm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0uP-ML-rc7" secondAttribute="trailing" id="Wmm-MU-ncI"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="0uP-ML-rc7" secondAttribute="bottom" id="uKs-Nf-DnV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="M3r-rv-Vna" id="CME-kZ-RVD"/>
+                                    <outlet property="picture" destination="P9X-cw-vIt" id="Bt1-Fs-rSE"/>
+                                    <outlet property="restaurantLabel" destination="00B-YP-eMe" id="ixX-WA-uIn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bRW-5c-Kfh" id="fD2-bk-RBw"/>
+                            <outlet property="delegate" destination="bRW-5c-Kfh" id="S8b-1o-lgX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Da9-Wr-lOj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yQf-af-mYw">
+                            <color key="tintColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="pressedAdd:" destination="bRW-5c-Kfh" id="JVG-Ti-7ce"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dA7-sO-nhX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4707.2463768115949" y="679.89130434782612"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="GE6-AJ-RnX">
+            <objects>
+                <viewController id="aqh-cA-qZB" userLabel="Map" customClass="MapViewController" customModule="restaurants_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iHp-iH-yzW">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="043-FI-HJ1" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                </accessibility>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="dJx-te-qtq">
+                                <rect key="frame" x="198" y="458" width="32" height="32"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="URw-5J-Oeb"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="043-FI-HJ1" firstAttribute="top" secondItem="iHp-iH-yzW" secondAttribute="top" id="60Z-4z-QzA"/>
+                            <constraint firstItem="dJx-te-qtq" firstAttribute="bottom" secondItem="URw-5J-Oeb" secondAttribute="centerY" id="A3Z-aX-68u"/>
+                            <constraint firstAttribute="bottom" secondItem="043-FI-HJ1" secondAttribute="bottom" id="KhY-4F-etC"/>
+                            <constraint firstAttribute="trailing" secondItem="043-FI-HJ1" secondAttribute="trailing" id="WF8-wb-NRR"/>
+                            <constraint firstItem="043-FI-HJ1" firstAttribute="leading" secondItem="iHp-iH-yzW" secondAttribute="leading" id="lLn-5m-9yy"/>
+                            <constraint firstItem="dJx-te-qtq" firstAttribute="centerX" secondItem="URw-5J-Oeb" secondAttribute="centerX" id="uFa-Vx-7wk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" selectedImage="map" id="50z-vE-aBX"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="043-FI-HJ1" id="VhI-36-duu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkR-wu-nQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3800.0000000000005" y="-82.366071428571431"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kiK-em-YOG">
+            <objects>
+                <tabBarController id="27v-2f-2ug" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lvV-oB-NZV"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hC6-mg-BV2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.77158612668160487" green="0.79371362457419048" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aqh-cA-qZB" kind="relationship" relationship="viewControllers" id="HtK-d1-2uV"/>
+                        <segue destination="fOl-aD-9wL" kind="relationship" relationship="viewControllers" id="37v-L1-R9M"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqa-zG-Hks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2914" y="276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5ZN-vV-0Vy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OBi-lQ-36f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ikZ-nT-vL6">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dgZ-Zd-BVM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKo-Hl-mxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="79.6875"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="kCi-pS-W3x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fOl-aD-9wL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends" image="person" selectedImage="person" id="aCo-Z6-nFe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lrX-be-F0k">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.89405859509999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.77158612670000004" green="0.79371362459999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.62352941179999999" green="0.68627450980000004" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.76980653099999996" green="0.70000478830000001" blue="0.51716987699999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bRW-5c-Kfh" kind="relationship" relationship="rootViewController" id="Bbh-rg-3Iz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueS-Rn-KeZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3800.0000000000005" y="679.89130434782612"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0VH-v9-9Ge">
+            <size key="intrinsicContentSize" width="93.666666666666671" height="34"/>
+        </designable>
+        <designable name="2ah-vJ-k9q">
+            <size key="intrinsicContentSize" width="155" height="34"/>
+        </designable>
+        <designable name="7y9-ro-hdF">
+            <size key="intrinsicContentSize" width="116.33333333333333" height="34"/>
+        </designable>
+        <designable name="l2R-UV-qVe">
+            <size key="intrinsicContentSize" width="116.33333333333333" height="34"/>
+        </designable>
+        <designable name="nM5-v2-Nrr">
+            <size key="intrinsicContentSize" width="92" height="34"/>
+        </designable>
+        <designable name="oTf-a6-Bhw">
+            <size key="intrinsicContentSize" width="93.666666666666671" height="34"/>
+        </designable>
+        <designable name="yaw-WO-NsB">
+            <size key="intrinsicContentSize" width="171.66666666666666" height="34"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="L5Y-9W-iv3"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" name="AccentColor"/>
+    <resources>
+        <image name="email" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="map" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="name" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="password" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="person" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="phone" width="20" height="20"/>
+        <image name="pin" width="32" height="32"/>
+        <image name="restaurant" width="323.33334350585938" height="218.33332824707031"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

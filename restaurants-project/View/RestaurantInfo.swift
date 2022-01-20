@@ -12,13 +12,16 @@ class RestaurantInfo: UIView {
     @IBOutlet weak var restaurantLabel: UILabel!
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var selectButton: UIButton!
+    
     
 }
 
+//seç button için action ekle
 
 
-extension UIView{
-    func animShow(){
+extension UIView {
+    func animShow() {
         UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn],
                        animations: {
             self.center.y -= self.frame.height

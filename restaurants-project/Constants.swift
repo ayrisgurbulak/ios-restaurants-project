@@ -1,4 +1,5 @@
 import Foundation
+import Firebase
 
 struct C {
     static let appName = "Restaurants"
@@ -9,5 +10,9 @@ struct C {
         static let restaurantsUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=prominence&sensor=true&key=\(googleAPIKey)&types=restaurant"
         
         static let directionUrl = "https://maps.googleapis.com/maps/api/directions/json?mode=driving&key=\(googleAPIKey)"
+    }
+    
+    struct Db {
+        static let db = Firestore.firestore()
     }
 }
