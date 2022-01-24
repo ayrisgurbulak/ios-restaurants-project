@@ -12,6 +12,18 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+            let tabControl = segue.destination as! UITabBarController
+            let destinationVC1 = tabControl.viewControllers![0] as! MapViewController
+            destinationVC1.userEmail = emailTextfield.text!
+            
+            let destinationVC2 = tabControl.viewControllers![1] as! FriendsNavigationViewController
+            let destinationVC3 = destinationVC2.topViewController as! FriendsViewController
+            destinationVC3.userEmail = emailTextfield.text!
+        
+    }
+    
     @IBAction func loginPressed(_ sender: UIButton) {
         
         if let email = emailTextfield.text, let password = passwordTextfield.text {

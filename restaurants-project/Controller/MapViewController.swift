@@ -1,6 +1,7 @@
 import UIKit
 import GoogleMaps
 import FirebaseAuth
+import CoreData
 
 class MapViewController: UIViewController {
 
@@ -9,11 +10,16 @@ class MapViewController: UIViewController {
     let locationManager = CLLocationManager()
     private let dataProvider = RestaurantDataManager()
     private let searchRadius: Double = 1500
+    
     let infoView = Bundle.main.loadNibNamed("RestaurantInfo", owner: self, options: nil)![0] as! RestaurantInfo
+    
+    var userEmail: String?
     
     private let restaurantAnimate = RestaurantInfo()
     
     var oldPolyLines = [GMSPolyline]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +43,17 @@ class MapViewController: UIViewController {
     }
     
     @objc func selectButtonPressed() {
-        //print(infoView.restaurantLabel.text!)
-        /*C.Db.db.collection("users").whereField("number", isEqualTo: "5398210157").getDocuments { snaphot, error in
-            for document in snaphot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+        
+        if let userEmail = userEmail {
+            C.Db.db.collection("users").whereField("email", isEqualTo: userEmail).getDocuments() { snapshot, error in
+                if let data = snapshot?.documents.first {
+                    let uuid = data.data()["uuid"]!
+                    C.Db.db.collection("users").document(uuid as! String).updateData(["restaurant" : self.infoView.restaurantLabel.text!])
                 }
-        }*/
+            }
+        }
+        
+            
     }
 
     override func viewWillAppear(_ animated: Bool) {

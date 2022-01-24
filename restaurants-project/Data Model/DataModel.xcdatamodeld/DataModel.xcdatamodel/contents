@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CurrentUser" representedClassName=".CurrentUser" syncable="YES" codeGenerationType="class">
+        <attribute name="mail" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="number" attributeType="String"/>
+        <attribute name="uuid" attributeType="String"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserFriend" inverseName="parentUser" inverseEntity="UserFriend"/>
+    </entity>
+    <entity name="UserFriend" representedClassName="UserFriend" syncable="YES" codeGenerationType="class">
+        <attribute name="friendsImage" optional="YES" attributeType="Binary"/>
+        <attribute name="friendsName" attributeType="String"/>
+        <attribute name="friendsNumber" attributeType="String"/>
+        <relationship name="parentUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentUser" inverseName="friends" inverseEntity="CurrentUser"/>
+    </entity>
+    <elements>
+        <element name="CurrentUser" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="UserFriend" positionX="-280.8603515625" positionY="-8.363494873046875" width="128" height="103"/>
+    </elements>
+</model>

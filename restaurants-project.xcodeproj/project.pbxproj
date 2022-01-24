@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC0B0655274D680100F58335 /* TextFieldAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0B0654274D680100F58335 /* TextFieldAnimation.swift */; };
+		EC3174A8279AC7150000AF92 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC3174A6279AC7150000AF92 /* DataModel.xcdatamodeld */; };
 		EC669CA5274D777B00D680A6 /* RestaurantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC669CA4274D777B00D680A6 /* RestaurantData.swift */; };
 		EC669CA7274D779200D680A6 /* RestaurantDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC669CA6274D779200D680A6 /* RestaurantDataManager.swift */; };
 		EC669CAB274D77CA00D680A6 /* RestaurantMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC669CAA274D77CA00D680A6 /* RestaurantMarker.swift */; };
@@ -20,6 +21,8 @@
 		EC9CA066274BA8D7008A3C98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CA065274BA8D7008A3C98 /* Constants.swift */; };
 		EC9F12E727578D94004386B3 /* RestaurantInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC9F12E627578D94004386B3 /* RestaurantInfo.xib */; };
 		EC9F12E927578DD0004386B3 /* RestaurantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F12E827578DD0004386B3 /* RestaurantInfo.swift */; };
+		ECC70FE7279B669E006BBFBC /* FriendsNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC70FE6279B669E006BBFBC /* FriendsNavigationViewController.swift */; };
+		ECC70FE9279B6F02006BBFBC /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECC70FE8279B6F02006BBFBC /* Pacifico-Regular.ttf */; };
 		ECDCB50327693E050082E97E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD92C9D2768EBD400E6D287 /* Main.storyboard */; };
 		ECEE648C2778A89F00EE03F0 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEE648B2778A89F00EE03F0 /* FriendsCell.swift */; };
 		ECF0581327721D750023F5B2 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF0581227721D750023F5B2 /* Friend.swift */; };
@@ -36,6 +39,7 @@
 /* Begin PBXFileReference section */
 		B21B181720EEF42299026D28 /* Pods_restaurants_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_restaurants_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0B0654274D680100F58335 /* TextFieldAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAnimation.swift; sourceTree = "<group>"; };
+		EC3174A7279AC7150000AF92 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EC669CA4274D777B00D680A6 /* RestaurantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantData.swift; sourceTree = "<group>"; };
 		EC669CA6274D779200D680A6 /* RestaurantDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataManager.swift; sourceTree = "<group>"; };
 		EC669CAA274D77CA00D680A6 /* RestaurantMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMarker.swift; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 		EC9CA065274BA8D7008A3C98 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC9F12E627578D94004386B3 /* RestaurantInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantInfo.xib; sourceTree = "<group>"; };
 		EC9F12E827578DD0004386B3 /* RestaurantInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfo.swift; sourceTree = "<group>"; };
+		ECC70FE6279B669E006BBFBC /* FriendsNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsNavigationViewController.swift; sourceTree = "<group>"; };
+		ECC70FE8279B6F02006BBFBC /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "restaurants-project/Fonts/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		ECDCB50127693DE30082E97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECEE648B2778A89F00EE03F0 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		ECF0581227721D750023F5B2 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
@@ -93,9 +99,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC3174A5279AC6F50000AF92 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC3174A6279AC7150000AF92 /* DataModel.xcdatamodeld */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
 		EC9CA030274BA435008A3C98 = {
 			isa = PBXGroup;
 			children = (
+				ECC70FE8279B6F02006BBFBC /* Pacifico-Regular.ttf */,
 				EC9CA03B274BA435008A3C98 /* restaurants-project */,
 				EC9CA03A274BA435008A3C98 /* Products */,
 				254EA40D5869A51A6CB7E40D /* Pods */,
@@ -114,6 +129,7 @@
 		EC9CA03B274BA435008A3C98 /* restaurants-project */ = {
 			isa = PBXGroup;
 			children = (
+				EC3174A5279AC6F50000AF92 /* Data Model */,
 				ECFC030E274D629100A5B6B2 /* Controller */,
 				ECFC030D274D625E00A5B6B2 /* Model */,
 				EC9CA054274BA61F008A3C98 /* Fonts */,
@@ -162,6 +178,7 @@
 				ECFC0313274D633800A5B6B2 /* SignupViewController.swift */,
 				ECFC0315274D635C00A5B6B2 /* MapViewController.swift */,
 				ECFC0317274D636B00A5B6B2 /* FriendsViewController.swift */,
+				ECC70FE6279B669E006BBFBC /* FriendsNavigationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -227,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC70FE9279B6F02006BBFBC /* Pacifico-Regular.ttf in Resources */,
 				EC9F12E727578D94004386B3 /* RestaurantInfo.xib in Resources */,
 				EC9CA055274BA61F008A3C98 /* Fonts in Resources */,
 				EC9CA049274BA436008A3C98 /* LaunchScreen.storyboard in Resources */,
@@ -305,6 +323,7 @@
 				ECFC0318274D636B00A5B6B2 /* FriendsViewController.swift in Sources */,
 				ECFC0314274D633800A5B6B2 /* SignupViewController.swift in Sources */,
 				ECFC0310274D630200A5B6B2 /* LoginViewController.swift in Sources */,
+				ECC70FE7279B669E006BBFBC /* FriendsNavigationViewController.swift in Sources */,
 				ECFC0312274D631300A5B6B2 /* WelcomeViewController.swift in Sources */,
 				ECF91FD9276548C7000DEE10 /* Directions.swift in Sources */,
 				EC669CA5274D777B00D680A6 /* RestaurantData.swift in Sources */,
@@ -317,6 +336,7 @@
 				EC9CA066274BA8D7008A3C98 /* Constants.swift in Sources */,
 				ECFC031A274D639D00A5B6B2 /* TextFieldUIDesign.swift in Sources */,
 				ECF0581327721D750023F5B2 /* Friend.swift in Sources */,
+				EC3174A8279AC7150000AF92 /* DataModel.xcdatamodeld in Sources */,
 				EC669CAB274D77CA00D680A6 /* RestaurantMarker.swift in Sources */,
 				ECFC0316274D635C00A5B6B2 /* MapViewController.swift in Sources */,
 			);
@@ -540,6 +560,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC3174A6279AC7150000AF92 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC3174A7279AC7150000AF92 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EC3174A7279AC7150000AF92 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EC9CA031274BA435008A3C98 /* Project object */;
 }

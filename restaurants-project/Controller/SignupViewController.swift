@@ -1,6 +1,7 @@
 import UIKit
 import Firebase
 import CryptoSwift
+import CoreData
 
 class SignupViewController: UIViewController {
 
@@ -10,10 +11,25 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordTextField: DesignableUITextField!
     @IBOutlet weak var confirmPasswordTextField: DesignableUITextField!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                if segue.identifier == C.signupSegue {
+                    let tabControl = segue.destination as! UITabBarController
+                    let destinationVC1 = tabControl.viewControllers![0] as! MapViewController
+                    destinationVC1.userEmail = emailTextField.text!
+                    
+                    let destinationVC2 = tabControl.viewControllers![1] as! FriendsNavigationViewController
+                    let destinationVC3 = destinationVC2.topViewController as! FriendsViewController
+                    destinationVC3.userEmail = emailTextField.text!
+                }
     }
     
 
@@ -37,10 +53,19 @@ class SignupViewController: UIViewController {
                                     "uuid": uuid,
                                     "name": self.nameTextField.text!,
                                     "email": self.emailTextField.text!,
-                                    "password:": passwordMD5,
-                                    "number:": self.numberTextField.text!]
+                                    "password": passwordMD5,
+                                    "number": self.numberTextField.text!]
                                 
                                 C.Db.db.collection("users").document(uuid).setData(userData)
+                                
+                                let user = CurrentUser(context: self.context)
+                                
+                                user.name = self.nameTextField.text!
+                                user.mail = self.emailTextField.text!
+                                user.number = self.numberTextField.text!
+                                user.uuid = uuid
+                                
+                                self.saveUser()
 
                                 self.performSegue(withIdentifier: C.signupSegue, sender: self)
                             }
@@ -87,6 +112,15 @@ class SignupViewController: UIViewController {
         
         return passwordPred.evaluate(with: password)
         
+    }
+    
+    func saveUser() {
+        do {
+            try context.save()
+        }
+        catch {
+            print("Error saving context \(error)")
+        }
     }
 
 }
