@@ -3,7 +3,7 @@ import Firebase
 import GoogleMaps
 import CoreData
 
-let googleAPIKey = "AIzaSyDHIw4Tv0b1m3cbP1JZGMewPIFpR9A9SBU"
+let googleAPIKey = "ENTER_KEY"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
