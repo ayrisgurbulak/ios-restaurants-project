@@ -132,7 +132,7 @@ extension FriendsViewController {
               cell.restaurantLabel.text = restaurantLabel
           }
           else {
-              cell.restaurantLabel.text = "Restaurant bilgisi bulunamadı"
+              cell.restaurantLabel.text = ""
           }
       }
       
